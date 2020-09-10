@@ -1,0 +1,244 @@
+/* Reset */
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+ul {
+    list-style: none;
+}
+
+body {
+    background-color: var(--background-dark);
+    color: var(--text-light);
+    -webkit-font-smoothing: antialiased;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Configurações */
+:root {
+    --text-light: #FFFFFF;
+    --text-light-selected: #E0E0E0;
+    --text-dark: #27363A;
+    --text-items-description: #B0B0B0;
+
+    --background-dark: #27363A;
+    --background-light: #FFFFFF;
+    --background-items-description: #B0B0B0;
+
+    --background-box-success: #D4EDDA;
+    --border-box-success: #C3E6CB;
+    --text-box-success: #155724;
+
+    --background-box-error: #F8D7DA;
+    --border-box-error: #F5C6CB;
+    --text-box-error: #721C24;
+}
+
+
+/* Principal */
+.container {
+    max-width: 1120px;
+    width: 100%;
+    min-height: 100vh;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+main.container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+
+main #logo {
+    max-width: 450px;
+    width: 100%;
+    margin: 60px 0 30px;
+}
+
+main form.form-search {
+    max-width: 450px;
+    width: 100%;
+    display: flex;
+}
+
+
+main .form-search label {
+    display: none;
+}
+
+main .form-search input {
+    max-width: 450px;
+    flex: 1;
+    height: 45px;
+    font-size: 1.125rem;
+    outline: none;
+    padding: 5px 10px;
+    border-radius: 4px 0 0 4px;
+    border: none;
+}
+
+main .form-search button {
+    padding: 5px 10px;
+    height: 45px;
+    max-width: 100%;
+    border-radius: 0 4px 4px 0;
+    border: none;
+    font-size: 1.125rem;
+    cursor: pointer;
+    transition: background-color .3s;
+}
+
+main .form-search button:focus,
+main .form-search button:hover {
+    outline: none;
+    background-color: var(--text-light-selected);
+}
+
+main div.alert {
+    margin-top: 15px;
+    max-width: 450px;
+    width: 100%;
+    padding: 5px 10px;
+    border-radius: 4px;
+    display: none;
+}
+
+main div.alert.success {
+    background-color: var(--background-box-success);
+    border: 2px solid var(--border-box-success);
+    color: var(--text-box-success);
+    display: block;
+}
+
+main div.alert.error {
+    background-color: var(--background-box-error);
+    border: 2px solid var(--border-box-error);
+    color: var(--text-box-error);
+    display: block;
+}
+
+main .separador {
+    max-width: 650px;
+    width: 100%;
+    height: 2px;
+    background-color: var(--text-light);
+    margin: 30px 0;
+}
+
+/* Perfil */
+.perfil {
+    max-width: 650px;
+    width: 100%;
+    background-color: var(--background-light);
+    border-radius: 4px;
+    color: var(--text-dark);
+  
+}
+
+.perfil .header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+}
+
+.perfil .header img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.perfil .header h3 {
+    font-size: 1.125rem;
+
+}
+
+.perfil .header h3 a {
+    text-decoration: none;
+    color: var(--background-dark);
+}
+
+.perfil .header span {
+    font-size: 1rem;
+    font-weight: 300;
+    margin-bottom: 15px;
+}
+
+.perfil .footer {
+    background-color: var(--background-items-description);
+    padding: 15px;
+    border-radius: 0 0 4px 4px;
+}
+
+.perfil .footer ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.perfil .footer ul li {
+    font-size: 1.125rem;
+    text-align: center;
+    cursor: pointer;
+}
+
+.perfil .footer ul li:hover {
+    transform: scale(1.05);
+}
+
+.perfil .footer ul li span {
+    font-size: 1.5rem;
+    display: block;
+}
+
+.perfil .footer ul li + li {
+    margin-left: 30px
+}
+
+/* Lista de Repositorios */
+
+.repositorios {
+    max-width: 650px;
+    width: 100%;
+}
+
+.repositorios h3 {
+    margin-top: 30px;
+    margin-bottom: 15px;
+    font-size: 1.125rem;
+    font-weight: 400;
+}
+
+.lista-repositorios li {
+    color: var(--text-items-description);
+    background-color: var(--background-light);
+    padding: 15px;
+    font-size: 1.125rem;
+    border-radius: 4px;
+    transition: 0.3s;
+    margin-bottom: 15px;
+}
+
+.lista-repositorios li a {
+    color: var(--text-dark);
+}
+
+.lista-repositorios li p {
+    margin-top: 15px;
+}
+
+.lista-repositorios li:hover {
+    transform: scale(1.01);
+}

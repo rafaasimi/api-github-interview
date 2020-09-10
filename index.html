@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub API | Compasso UOL</title>
+
+    <link rel="stylesheet" href="./css/geral.css">
+</head>
+
+<body>
+
+    <main class="container">
+        <a href="/"><img id="logo" src="./img/logo.svg" alt="Logo"></a>
+        <form class="form-search" method="POST">
+            <label for="user">Usuário</label>
+            <input type="text" name="user" id="user" placeholder="Digite um usuário do GitHub..." autocomplete="off">
+            <button type="submit" data-buscar>Buscar</button>
+        </form>
+        <div class="alert" data-alert></div>
+        <div class="separador"></div>
+
+        <!-- Perfil do Usuário -->
+        <div class="perfil">
+        </div>
+
+        <!-- Lista de Repositórios -->
+        <div class="repositorios">
+            <h3>Repositórios</h3>
+            <ul class="lista-repositorios">
+                <p>Nenhum repositório listado.</p>
+            </ul>
+        </div>
+    </main>
+
+    <script type="module" src="./js/script.js"></script>
+</body>
+
+</html>
