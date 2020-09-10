@@ -16,7 +16,6 @@ export default async function fetchRepositories(URL) {
         }
 
 
-
     } catch (error) {
         console.log(Error(erro));
     }
