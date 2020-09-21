@@ -4,11 +4,11 @@ import fetchRepositories from './fetchRepositories.js';
 export default function consultarDados() {
 
     const buttonSubmit = document.querySelector('[data-buscar]')
-    buttonSubmit.addEventListener('click', puxarUsuario)
+    buttonSubmit.addEventListener('click', getUser)
 
 
     // Função responsável por fazer a solicitação dos dados do perfil procurado.
-    async function puxarUsuario(event) {
+    async function getUser(event) {
         event.preventDefault();
         const inputUsuario = document.querySelector('#user').value;
         const profileJSON = await fetchGithub(inputUsuario);
@@ -16,7 +16,7 @@ export default function consultarDados() {
         const { login, name, avatar_url, html_url, bio, public_repos } = profileJSON
         const userElement = createUserElement(login, name, avatar_url, html_url, bio, public_repos)
 
-        const userBox = document.querySelector('.perfil')
+        const userBox = document.querySelector('.profile')
         userBox.innerHTML = '';
         userBox.appendChild(userElement);
 
@@ -54,8 +54,8 @@ export default function consultarDados() {
             </div>
             <div class="footer">
                 <ul>
-                    <li data-repositories><span>${public_repos}</span>Repositórios</li>
-                    <li data-starred><span>6</span>Favoritos</li>
+                    <li data-repositories>Repositórios</li>
+                    <li data-starred>Favoritos</li>
                 </ul>
             </div>
         `
@@ -68,10 +68,10 @@ export default function consultarDados() {
     // Percorre toda a Array, solicitando a criação dos elementos.
     async function getRepositories(URL) {
 
-        const repoElement = document.querySelector('.lista-repositorios')
+        
+        const repoElement = document.querySelector('.repositories-list')
         const repositoriesJSON = await fetchRepositories(URL)
         const repositoriesLength = document.createElement('span')
-
 
 
         repoElement.innerHTML = '';
@@ -86,6 +86,7 @@ export default function consultarDados() {
 
             repoElement.appendChild(repoItem)
         })
+
     }
 
 

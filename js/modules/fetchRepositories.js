@@ -1,6 +1,6 @@
 export default async function fetchRepositories(URL) {
 
-    const boxRepositories = document.querySelector('.lista-repositorios')
+    const boxRepositories = document.querySelector('.repositories-list')
 
     try {
         const repository = await fetch(URL);

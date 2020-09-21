@@ -134,8 +134,8 @@ main .separador {
     margin: 30px 0;
 }
 
-/* Perfil */
-.perfil {
+/* profile */
+.profile {
     max-width: 650px;
     width: 100%;
     background-color: var(--background-light);
@@ -144,7 +144,7 @@ main .separador {
   
 }
 
-.perfil .header {
+.profile .header {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -152,76 +152,79 @@ main .separador {
     padding: 15px;
 }
 
-.perfil .header img {
+.profile .header img {
     width: 100px;
     height: 100px;
     border-radius: 50%;
     margin-bottom: 10px;
 }
 
-.perfil .header h3 {
+.profile .header h3 {
     font-size: 1.125rem;
 
 }
 
-.perfil .header h3 a {
+.profile .header h3 a {
     text-decoration: none;
     color: var(--background-dark);
 }
 
-.perfil .header span {
+.profile .header span {
     font-size: 1rem;
     font-weight: 300;
     margin-bottom: 15px;
 }
 
-.perfil .footer {
+.profile .footer {
     background-color: var(--background-items-description);
     padding: 15px;
     border-radius: 0 0 4px 4px;
 }
 
-.perfil .footer ul {
+.profile .footer ul {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
 }
 
-.perfil .footer ul li {
+.profile .footer ul li {
     font-size: 1.125rem;
     text-align: center;
     cursor: pointer;
+    border: 1px solid var(--text-dark);
+    border-radius: 4px;
+    padding: 5px;
 }
 
-.perfil .footer ul li:hover {
+.profile .footer ul li:hover {
     transform: scale(1.05);
 }
 
-.perfil .footer ul li span {
+.profile .footer ul li span {
     font-size: 1.5rem;
     display: block;
 }
 
-.perfil .footer ul li + li {
+.profile .footer ul li + li {
     margin-left: 30px
 }
 
-/* Lista de Repositorios */
+/* Lista de repositories */
 
-.repositorios {
+.repositories {
     max-width: 650px;
     width: 100%;
 }
 
-.repositorios h3 {
+.repositories h3 {
     margin-top: 30px;
     margin-bottom: 15px;
     font-size: 1.125rem;
     font-weight: 400;
 }
 
-.lista-repositorios li {
+.repositories-list li {
     color: var(--text-items-description);
     background-color: var(--background-light);
     padding: 15px;
@@ -231,14 +234,14 @@ main .separador {
     margin-bottom: 15px;
 }
 
-.lista-repositorios li a {
+.repositories-list li a {
     color: var(--text-dark);
 }
 
-.lista-repositorios li p {
+.repositories-list li p {
     margin-top: 15px;
 }
 
-.lista-repositorios li:hover {
+.repositories-list li:hover {
     transform: scale(1.01);
 }

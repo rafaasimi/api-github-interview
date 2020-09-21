@@ -1,8 +1,8 @@
 export default async function fetchGithub(profileGithubUrl) {
 
     const boxAlert = document.querySelector('[data-alert]')
-    const userBox = document.querySelector('.perfil')
-    const repoElement = document.querySelector('.lista-repositorios')
+    const userBox = document.querySelector('.profile')
+    const repoElement = document.querySelector('.repositories-list')
     userBox.innerHTML = ''
     repoElement.innerHTML = ''
 
